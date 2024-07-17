@@ -1,0 +1,40 @@
+body{
+    background-color: #f6f6f6;
+    font-family: "Open Sans", Arial, Helvetica;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+div {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+h1 {
+    margin-bottom: 1.5em;
+    font-size: 30px;
+    color: #484548;
+    font-weight: 100;
+  }
+   h1 span {
+    display:block;
+    font-size: 14px;
+    color: #989598;
+   }
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+input {
+    width: 250px;
+    padding: 15px 12px;
+    margin-bottom: 5px;
+    border: 1px solid #e5e5e5;
+    border-bottom: 2px solid #ddd;
+    background: #f2f2f2;
+    color: #555;
+  }
