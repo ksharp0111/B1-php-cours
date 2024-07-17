@@ -1,13 +1,18 @@
 body{
     background-color: #f6f6f6;
     font-family: "Open Sans", Arial, Helvetica;
+    margin-top: 50px;
+    font-size: 14px;
 }
 
 div {
+    width: 400px;
+    margin: 0 auto;
     text-align: center;
   }
 
 h1 {
+    margin-bottom: 1.5em;
     font-size: 30px;
     color: #484548;
     font-weight: 100;
