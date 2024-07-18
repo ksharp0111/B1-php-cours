@@ -1,9 +1,9 @@
 <?php 
 
 $host = '127.0.0.1';  //localhost
-$db = 'bdd_pharamatruc'; //nom de la base de donnée
-$user = 'root';
-$pass = '';
+$db = 'b1'; //nom de la base de donnée
+$user = 'userdb';
+$pass = 'merguez69';
 $charset = 'utf8mb4';
 
 $connection_string = "mysql:host=$host; dbname=$db; charset=$charset";
