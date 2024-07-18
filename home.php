@@ -16,7 +16,7 @@ $options = [
 
 try{
   $pdo = new PDO ($connection_string, $user, $pass, $options); //connexion a la bdd
-  $sql = "SELECT id, nom_du_medoc, forme, date_de_peremption, Dose, stock FROM stockmedoc;";  //requette préparer
+  $sql = "SELECT * FROM stockmedoc;";  //requette préparer
   $stmt = $pdo->prepare($sql); //appel de la requete preparer
   $success = $stmt->execute(); //execution de la requete preparer
   $result = $stmt->fetchAll();// La méthode fetch() de l'objet $stmt est appelée pour récupérer les résultats de la requête exécutée
