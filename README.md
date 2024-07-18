@@ -1,19 +1,28 @@
+Ce code sert à un site projet de gestion de stock de médicament 
+
+
+
+* 1 le serveur
+
+seveur sous ubuntu 22.04
+
 89.168.49.216
 user: ubuntu
 ubuntu@89.168.49.216
 
 apache
 
+mise à jour du serveur
 ```bash
  sudo apt update
 ```
 
-
+installation du serveur web
 ```bash
  sudo apt -y install apache2
 ```
 
-
+redemarage de apache2
 ```bash
  sudo systemctl restart apache2
 ```
@@ -24,8 +33,8 @@ sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
 sudo netfilter-persistent save
 ```
 
+attribution des permissions en |toutes actions pour root | lecture et execution pour les autres|
 ```bash
- 
 sudo chmod -R 755 /var/www/ 
 ```
 
@@ -35,10 +44,12 @@ sudo chmod -R 755 /var/www/
 
 php
 
+installation de php et de son paquet 
 ```bash
  sudo apt -y install php libapache2-mod-php
 ```
 
+verification de la version de php ici 8.1
 ```bash
 php -v
 ```
@@ -115,28 +126,9 @@ FLUSH PRIVILEGES;
 ```
      
 
-         
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-* 1 index.php
+** 2 index.php
 L'index.php est le formulaire 
 ![alt text](image.png)
 le formulaire n est encore connecter à aucune base de donnée
@@ -155,7 +147,7 @@ le formulaire utlise pour action le fichier action.php
 ```
 comme la table d'utilisateur n'a pas encore été crée ce fichier n'a que pour seul action d'envoyer vers le lien définis
 
-** 2 home.php
+*** 3 home.php
 La page home.php est la page d'accueil et 
 ![alt text](image-1.png)
 pour commencer le php permet à la page de se connecter a la base de donnée bdd_pharamatruc
@@ -224,7 +216,7 @@ echo "</tr>";
 ```
 Parcour du tableau avec la boucle foreach et as attribue chaque element de $result a $stockmedoc
 
-*** update.php
+**** 4 update.php
 le detail des medicament est visible en cliquant sur le bouton "detail" celui-ci renvoit vers le fichier update.php
 ```php
 <?php
@@ -258,3 +250,6 @@ le detail des medicament est visible en cliquant sur le bouton "detail" celui-ci
     <input type="submit" value="Valider">
     </form>
 ```
+
+
+ethan à l'ecriture de la doc
