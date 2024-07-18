@@ -252,4 +252,8 @@ le detail des medicament est visible en cliquant sur le bouton "detail" celui-ci
 ```
 
 
+<<<<<<< HEAD
 ethan à l'ecriture de la doc
+=======
+ethan à l'ecriture de la doc
+>>>>>>> 9a92f848567994e357b004397d41e1023f11e7ca
