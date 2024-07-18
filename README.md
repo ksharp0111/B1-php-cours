@@ -1,3 +1,141 @@
+89.168.49.216
+user: ubuntu
+ubuntu@89.168.49.216
+
+apache
+
+```bash
+ sudo apt update
+```
+
+
+```bash
+ sudo apt -y install apache2
+```
+
+
+```bash
+ sudo systemctl restart apache2
+```
+
+
+```bash
+sudo iptables -I INPUT 6 -m state --state NEW -p tcp --dport 80 -j ACCEPT
+sudo netfilter-persistent save
+```
+
+```bash
+ 
+sudo chmod -R 755 /var/www/ 
+```
+
+
+
+
+
+php
+
+```bash
+ sudo apt -y install php libapache2-mod-php
+```
+
+```bash
+php -v
+```
+
+```bash
+ sudo systemctl restart apache2
+```
+
+```bash
+sudo vi /var/www/html/info.php
+```
+
+```php
+ <?php
+phpinfo();
+?>
+```
+
+
+
+
+mariadb
+
+le -y permet de repondre oui a toutes les questions pendant l installation
+```bash
+ sudo apt install mariadb-server -y
+```
+securisation de mariadb
+```bash
+sudo mysql_secure_installation 
+```
+          
+```SQL
+Switch to unix_socket authentication [Y/n] n
+
+Change the root password? [Y/n] y
+mdp root: merguez69 
+
+Remove anonymous users? [Y/n] y
+
+Disallow root login remotely? [Y/n] y
+
+Remove test database and access to it? [Y/n] y
+
+Reload privilege tables now? [Y/n] y
+```
+
+
+
+
+connexion a mariadb en root
+```bash
+sudo mariadb -u root -p 
+```
+
+creation d'un utilisateur        
+```SQL
+CREATE USER 'userdb'@'localhost' IDENTIFIED BY 'merguez69';
+```
+
+changement de bdd 
+```SQL
+USE b1
+```
+
+attribution de toutes les permissions a userdb  sur b1
+```SQL
+GRANT ALL PRIVILEGES ON b1 TO 'userdb'@'localhost';
+```
+
+rechergement des privileges 
+```SQL
+FLUSH PRIVILEGES;
+```
+     
+
+         
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 * 1 index.php
 L'index.php est le formulaire 
 ![alt text](image.png)
